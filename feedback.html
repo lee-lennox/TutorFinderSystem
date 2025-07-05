@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Reviews</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #info-box-full {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f7f7f7;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        #info-box-full h3 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .review {
+            background-color: #ffffff;
+            border-left: 4px solid #021AA0;
+            padding: 12px;
+            margin-bottom: 15px;
+            border-radius: 6px;
+        }
+
+        .review strong {
+            color: #021AA0;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        .book-btn {
+            background-color: #021AA0;
+            color: white;
+            padding: 10px 18px;
+            font-weight: bold;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .book-btn:hover {
+            background-color: #041070;
+        }
+
+        #tabs-bottom {
+            text-align: center;
+            margin-top: 30px;
+            
+        }
+
+        #tabs-bottom a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="info-box-full">
+        <h3>What Students Are Saying</h3>
+        <div id="review-list">
+            <div class="review"><strong>Thabo M.:</strong> “Margaret explains the theory so clearly. Her examples stick in my mind even during tests!”</div>
+            <div class="review"><strong>Kayla R.:</strong> “Emily’s practical sessions helped me finally understand joins and queries. So grateful!”</div>
+            <div class="review"><strong>Ali S.:</strong> “Jacob made me realise how important testing is. I caught three bugs before demo day thanks to him.”</div>
+        </div>
+    </div>
+
+    <div id="info-box-full">
+        <h3>Leave Your Review</h3>
+        <form id="review-form">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="message">Your Feedback:</label>
+            <textarea id="message" rows="4" required></textarea>
+
+            <button type="submit" class="book-btn">Submit Review</button>
+        </form>
+    </div>
+
+    <div id="tabs-bottom">
+        <a href="course.html">Back to Home page</a>
+    </div>
+
+    <script>
+        const form = document.getElementById('review-form');
+        const reviewList = document.getElementById('review-list');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            if (name && message) {
+                const newReview = document.createElement('div');
+                newReview.className = 'review';
+                newReview.innerHTML = `<strong>${name}:</strong> ${message}`;
+                reviewList.appendChild(newReview);
+
+                form.reset();
+            }
+        });
+    </script>
+
+</body>
+</html>
