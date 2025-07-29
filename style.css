@@ -2,6 +2,7 @@ body{
     padding: 0;
     margin: 0;
     font-family: Helvetica;
+    background-color: whitesmoke;
 }
 /****header*****/
 #header{
@@ -21,27 +22,33 @@ body{
     padding-top: 15px;
 }
 /****Top-tabs*****/
-#tabs-top{
-      position: fixed;
-      top     : 80px;
-      left    : 0;
-      z-index : 500;
-      width   : 100%;
-      height  : 40px;
-      background-color: rgb(2, 26, 160);
+#tabs-top {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  z-index: 500;
+  width: 100%;
+  height: 40px;
+  background-color: #0096c7;
+
+  display: flex;
+  justify-content: flex-start; 
+  align-items: center;
+  overflow: hidden; 
 }
 
-#tabs-top a{
-      float   : left;
-      display : block;
-      width   : 33%;
-      height  :35px;
-      font-weight : 700;
-      color       : white;
-      text-align  : center;
-      text-decoration : none;
-      padding-top     : 12px;  
+#tabs-top a {
+  display: inline-block;
+  height: 100%;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  padding: 0 16px;
+  line-height: 40px; 
+  white-space: nowrap; 
 }
+
 /******************MAIN.HOME*****************/
 #main-home{
     margin-top: 120px;
@@ -87,7 +94,7 @@ body{
 
 a.info-box {
     text-decoration: none;
-    background: rgba(255,255,225,0.9);
+    background: whitesmoke;
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -126,16 +133,20 @@ a.info-box p {
     }
     /**********************INFO BOX FULL**************/
     #info-box-full{
-        background:rgba(255,255,225,.8);
+        background: whitesmoke;
         width: 90%;
         display: block;
         margin: auto;
         margin-top: 12px;
         padding: 10px;
+        box-shadow: 0 5px 5px 5px rgba(0,0,0,0.1);
+        border-radius: 15px;
     }
     #info-box-full img{
-        width: 100%;
-
+        width: 350px;
+        height: 200px;
+        
+      
     }
     #info-box-full h3{
         text-align: center;
@@ -174,14 +185,41 @@ textarea{
       border : 1px solid #929292;
 }
 
-.button{
-      display : block;
-      background-color: rgb(42, 23, 151);
-      text-decoration : none;
-      text-align  : center;
-      color       : white;
-      font-size   : 16px;
-      font-weight : 600;
-      margin : 12px 0;
-      padding : 8px 0;
+.button {
+  display:block; 
+  width: 200px; 
+  margin: 20px auto; 
+  
+  background-color:  #0096c7;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 0;
+  border: none;
+  border-radius: 6px; 
+  cursor: pointer;
 }
+.button:hover {
+  background-color: #0077a9; 
+}
+
+/*Review form*/
+#review{
+  width: 90%;
+  max-width: 500px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
