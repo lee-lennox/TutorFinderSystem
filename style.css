@@ -29,7 +29,7 @@ body{
   z-index: 500;
   width: 100%;
   height: 40px;
-  background-color: #0096c7;
+  background-color: #1e90ff;
 
   display: flex;
   justify-content: flex-start; 
@@ -62,9 +62,10 @@ body{
     z-index: 500;
     width: 100%;
     height: 40px;
-    background-color: rgb(34, 45, 139);
+    background-color: #1e90ff;
 }
 #tabs-bottom a{
+    text-align: center;
     float: left;
     display: block;
     width: 50%;
