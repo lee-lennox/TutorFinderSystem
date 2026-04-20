@@ -1,0 +1,13 @@
+@import './fonts.css';
+@import './tailwind.css';
+@import './theme.css';
+
+/* Hide icon components in the UI. */
+.lucide {
+	display: none !important;
+}
+
+/* Remove empty icon-only wrappers that become visible blocks when icons are hidden. */
+div:has(> .lucide:only-child) {
+	display: none !important;
+}
