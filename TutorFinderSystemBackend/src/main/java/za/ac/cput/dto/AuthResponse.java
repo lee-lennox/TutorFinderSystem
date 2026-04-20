@@ -1,0 +1,30 @@
+package za.ac.cput.dto;
+
+
+public class AuthResponse {
+    private String message;
+    private String email;
+    private String role;
+
+    public AuthResponse(String message) {
+        this.message = message;
+    }
+
+    public AuthResponse(String message, String email, String role) {
+        this.message = message;
+        this.email = email;
+        this.role = role;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getRole() {
+        return role;
+    }
+}
